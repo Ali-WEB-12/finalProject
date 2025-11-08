@@ -5,7 +5,11 @@ import java.util.ArrayList;
 public class Expenditure {
     Scanner sc = new Scanner(System.in);
     BMS help = new BMS();
+
+    // ye kis balance ki baat ho rahi...
     protected static double balance;
+
+    // who makes array of a class in itself...
     ArrayList<Expenditure> expenditures = new ArrayList<>();
 
     public Expenditure(BMS b) {
@@ -31,12 +35,15 @@ public class Expenditure {
 }
 
 class MandatoryExp extends Expenditure {
+
+    // agar kisi ka rent barh gya phir ?
     private final double rent;
     private double messFee;
     private double gymFee;
     private double totalMandatoryExpen;
 
     public MandatoryExp(BMS b) { // should only be called once for a BMS object
+        // 2 bar call hone se kese bacho gay ?
         super(b);
         System.out.println("Enter Montly rent: ");
         rent = sc.nextDouble();
@@ -46,7 +53,7 @@ class MandatoryExp extends Expenditure {
     }
 
     public void getInfo() {
-
+        // ye tou constructor me input lene wali cheezen hain
         System.out.println("Mess Fee: ");
         messFee = sc.nextDouble();
         if (gym()) {

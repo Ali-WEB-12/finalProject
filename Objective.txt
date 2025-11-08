@@ -1,0 +1,4 @@
+The main objectives of this project in the priority order are given below :
+1. Learning Git/ Github
+2. Learning team work and coordination
+3. Learning java oop

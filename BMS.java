@@ -25,8 +25,9 @@ public class BMS {
         System.out.println("Enter your montly Budget: ");
         totalBalance = remBalance = sc.nextDouble();
         date = LocalDateTime.now();
-        System.out
-                .println(totalBalance + " RS is Successfully added into your Budget Basket! Dated: " + date + ".");
+        System.out.println(totalBalance + " RS is Successfully added into your Budget Basket! Dated: " + date + ".");
+        
+        // aik date boht nahi thi...?
         date2 = LocalDateTime.now();
         System.out.println("Action Menu: ");
         while (true) {
@@ -35,7 +36,7 @@ public class BMS {
             sc.nextLine();
             if (n == 0)
                 return;
-            if (n == 1)
+            else if (n == 1)
                 System.out.println(displayBalance());
             else if (n == 2)
                 ex.displayExpenditures();
@@ -52,6 +53,7 @@ public class BMS {
         if (b == null) {
             System.exit(0);
         }
+        // baki sab kuch bhi copy karna hota...
         this.remBalance = b.remBalance;
 
     }
